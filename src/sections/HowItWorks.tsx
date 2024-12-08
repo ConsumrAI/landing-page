@@ -1,11 +1,9 @@
 "use client";
-import productImage from "@/assets/dashboard.png";
-import starImage from "@/assets/star_blue.png";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import ArrowRight from "@/assets/arrow-right.svg";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 import painpointsImage from "@/assets/painpoints.png";
+import Image from "next/image";
 
 const pricingTiers = [
   {
@@ -51,45 +49,11 @@ const pricingTiers = [
   },
 ];
 
-export const ProductShowcase = () => {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+export const HowItWorks = () => {
   return (
-    <section
-      ref={sectionRef}
-      className="bg-white py-24 overflow-x-clip"
-    >
+    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
         <div className="section-heading">
-          {/* <div className="flex justify-center">
-            <div className="tag">Boost your productivity</div>
-          </div> */}
-          <h2 className="section-title mt-5">
-            A smarter way to understand your customers
-          </h2>
-          <p className="section-description mt-5">
-            Streamline feedback collection, gain insights, and accelerate growth with data-driven recommendations for better decision making.
-          </p>
-        </div>
-        <div className="relative">
-          <Image src={productImage} alt="Product Image" className="mt-10 shadow-2xl shadow-purple-800" />
-          <motion.img
-            src={starImage.src}
-            alt="Pyramid Image"
-            height={262}
-            width={262}
-            className="hidden md:block absolute -right-36 -top-44"
-            style={{
-              translateY,
-            }}
-          />
-        </div>
-
-        <div className="section-heading mt-28">
           <h2 className="section-title">How it works</h2>
           {/* <p className="section-description mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
@@ -122,7 +86,7 @@ export const ProductShowcase = () => {
                     {title}
                   </h3>
                 </div>
-                <ul className="flex flex-col lg:w-64 gap-5 mt-1">
+                <ul className="flex flex-col w-64 gap-5 mt-1">
                   {features.map((feature) => (
                     <li className="text-sm flex items-center gap-4">
                       {/* <ArrowRight className="h-6 w-6" /> */}
@@ -134,7 +98,7 @@ export const ProductShowcase = () => {
             )
           )}
         </div>
-        <Image src={painpointsImage} alt="Product Image" className="mt-20 shadow-2xl shadow-purple-800" />
+        <Image src={painpointsImage} alt="Product Image" className="mt-20" />
       </div>
     </section>
   );

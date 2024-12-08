@@ -1,10 +1,10 @@
 "use client";
-import acmeLogo from "@/assets/logo-acme.png";
-import quantumLogo from "@/assets/logo-quantum.png";
-import echoLogo from "@/assets/logo-echo.png";
-import celestialLogo from "@/assets/logo-celestial.png";
-import pulseLogo from "@/assets/logo-pulse.png";
-import apexLogo from "@/assets/logo-apex.png";
+import googleLogo from "@/assets/Google.png";
+import googlePlayLogo from "@/assets/Google Play.png";
+import instagramLogo from "@/assets/Instagram.png";
+import linkedinLogo from "@/assets/Linkedin.png";
+import redditLogo from "@/assets/Reddit.png";
+import xLogo from "@/assets/X.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -14,77 +14,77 @@ export const LogoTicker = () => {
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <motion.div
-            className="flex gap-14 flex-none pr-14"
+            className="flex gap-32 flex-none pr-14"
             animate={{
               translateX: "-50%",
             }}
             transition={{
-              duration: 20,
+              duration: 21,
               repeat: Infinity,
               ease: "linear",
               repeatType: "loop",
             }}
           >
             <Image
-              src={acmeLogo}
-              alt="Acme Logo"
+              src={redditLogo}
+              alt="Red Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
-              alt="Quantum Logo"
+              src={xLogo}
+              alt="x Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
-              alt="Echo Logo"
+              src={googleLogo}
+              alt="g Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
-              alt="Celestial Logo"
+              src={googlePlayLogo}
+              alt="gp Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={pulseLogo}
-              alt="Pulse Logo"
+              src={instagramLogo}
+              alt="i Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={apexLogo}
-              alt="Apex Logo"
+              src={linkedinLogo}
+              alt="l Logo"
               className="logo-ticker-image"
             />
 
             {/* Second set of logos for animation */}
             <Image
-              src={acmeLogo}
-              alt="Acme Logo"
+              src={redditLogo}
+              alt="r Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
-              alt="Quantum Logo"
+              src={xLogo}
+              alt="x Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
-              alt="Echo Logo"
+              src={googleLogo}
+              alt="g Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
-              alt="Celestial Logo"
+              src={googlePlayLogo}
+              alt="gp Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={pulseLogo}
-              alt="Pulse Logo"
+              src={instagramLogo}
+              alt="i Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={apexLogo}
-              alt="Apex Logo"
+              src={linkedinLogo}
+              alt="l Logo"
               className="logo-ticker-image"
             />
           </motion.div>
