@@ -105,14 +105,15 @@ export const ProductShowcase = () => {
               popular,
               inverse,
               features,
-            }) => (
+            }, index) => (
               <div
                 className={twMerge(
                   "card",
                   inverse === true && "border-black bg-black text-white"
                 )}
+                key={index}
               >
-                <div className="flex justify-between">
+                <div key={index} className="flex justify-between">
                   <h3
                     className={twMerge(
                       "text-lg font-bold text-black/75",
@@ -123,8 +124,8 @@ export const ProductShowcase = () => {
                   </h3>
                 </div>
                 <ul className="flex flex-col lg:w-64 gap-5 mt-1">
-                  {features.map((feature) => (
-                    <li className="text-sm flex items-center gap-4">
+                  {features.map((feature, index) => (
+                    <li key={index} className="text-sm flex items-center gap-4">
                       {/* <ArrowRight className="h-6 w-6" /> */}
                       <span>{feature}</span>
                     </li>
