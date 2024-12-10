@@ -1,15 +1,23 @@
 'use client'
 
+import { useState } from "react";
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/consumr_logo.png";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleJoinWaitlistClick = () => {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSeYGyRhyOUBlay63K-shFmf7hM9tZSiRzm-9FrJlBA1V_y-Qg/viewform?usp=dialog", "_blank");
   };
-  
+
+  const toggleMenu = () => {
+    // document.body.classList.toggle('overflow-hidden');
+    setMenuOpen(!menuOpen);
+  }
+
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
       {/* <div className="flex justify-center items-center py-3 bg-black text-white text-small">
@@ -23,7 +31,13 @@ export const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="Consumr Logo" height={40} width={40} />
-            <MenuIcon className="h-5 w-5 md:hidden"/>
+            <button
+              className="md:hidden p-2"
+              onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
+            >
+              <MenuIcon className="h-5 w-5" />
+            </button>
             <nav className="hidden md:flex gap-6 text-black items-center">
               {['About', 'Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
                 <div className="relative group" key={link}>
@@ -39,6 +53,20 @@ export const Header = () => {
               <button onClick={handleJoinWaitlistClick} className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">Join Waitlist</button>
             </nav>
           </div>
+
+          {menuOpen &&
+            (
+              <div className="flex items-center justify-center">
+                <nav className="md:hidden gap-6 mt-6 text-black text-center">
+                  {['About', 'Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
+                    <div className="relative group py-2" key={link}>
+                      <a href="#" className="relative z-10">{link}</a>
+                    </div>
+                  ))}
+                  <button onClick={handleJoinWaitlistClick} className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight mt-6">Join Waitlist</button>
+                </nav>
+              </div>
+            )}
         </div>
       </div>
     </header>
