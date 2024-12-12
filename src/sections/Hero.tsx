@@ -41,7 +41,7 @@ export const Hero = () => {
           </div>
           <h1 className="text-5xl md:text-7xl text-center font-bold tracking-tighter py-2 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Transform Insights Into Action</h1>
           {/* Smarter decisions powered by AI */}
-          <p className="text-2xl text-[#010D3E] tracking-tight text-center mt-6">Track and analyze your brand&apos;s digital presence with AI-powered social listening and review monitoring across all channels. Our platform captures customer feedback, analyzes brand mentions, and delivers actionable insights from social media and online conversations.</p>
+          <p className="text-xl text-[#010D3E] tracking-tight text-center mt-6">Track and analyze your brand&apos;s digital presence with AI-powered social listening and review monitoring across all channels. Our platform captures customer feedback, analyzes brand mentions, and delivers actionable insights from social media and online conversations.</p>
           <div className="flex gap-1 items-center justify-center mt-[30px]">
             <button onClick={handleJoinWaitlistClick} className="btn">Join Waitlist</button>
             {/* <button className="btn btn-text gap-1">

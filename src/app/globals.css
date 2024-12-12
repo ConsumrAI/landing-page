@@ -24,6 +24,6 @@
     }
 
     .section-description {
-        @apply text-2xl text-[#010D3E] text-center tracking-tight
+        @apply text-xl text-[#010D3E] text-center tracking-tight
     }
 }

@@ -93,7 +93,7 @@ export const ProductShowcase = () => {
           <div className='md:w-[575px]'>
             {/* <p className="text-xl text-[#010D3E] tracking-tight mt-6"> */}
 
-            <ul className="text-2xl text-[#010D3E] tracking-tight mt-6">
+            <ul className="text-xl text-[#010D3E] tracking-tight mt-6">
               <li className="py-8 flex gap-4 items-center">
                 &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes.
               </li>
