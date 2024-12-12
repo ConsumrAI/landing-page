@@ -50,7 +50,7 @@ const pricingTiers = [
     buttonText: "Sign up now",
     popular: false,
     inverse: false,
-    desc: "Turn insights into impact with automated recommendations and growth opportunities.", 
+    desc: "Turn insights into impact with automated recommendations and growth opportunities.",
     features: [
       "ROI-focused actions.",
       "Retention strategies.",
@@ -83,15 +83,10 @@ export const ProductShowcase = () => {
           <p className="section-description">
             Every interaction matters - gather intel from social media, customer reviews, and support tickets in one unified view. Keep tabs on competitors and track custom keywords to stay ahead of market trends. Spot viral conversations early with smart hashtag monitoring that keeps you in the loop.
           </p>
-          <h2 className="section-title pt-52">
-            A smarter way to understand your customers
-          </h2>
-          
         </div>
 
-        <div className='md:flex items-center pt-14 pb-24'>
+        {/* <div className='md:flex items-center pt-14 pb-24'>
           <div className='md:w-[348px]'>
-            {/* <p className="text-lg text-[#010D3E] tracking-tight mt-6"> */}
 
             <ul className="text-lg text-[#010D3E] tracking-tight mt-6">
               <li className="py-8 flex gap-4 items-center">
@@ -104,11 +99,36 @@ export const ProductShowcase = () => {
                 &#8226; Explore the evidence behind each theme with ease. Access original feedback and customer quotes instantly by a direct link.
               </li>
             </ul>
-            {/* </p> */}
           </div>
           <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
             <Image src={insightsImage} alt='Cog image' className='md:absolute md:h-full md:w-auto md:max-w-none' />
           </div>
+        </div> */}
+
+
+        <div className="section-heading">
+          <h2 className="section-title pt-52">
+            A smarter way to understand your customers
+          </h2>
+        </div>
+        <div className="md:flex items-center pt-8">
+          <div className="flex flex-col gap-6 items-center mr-24 md:items-end md:justify-end md:w-[548px]">
+            <div className={twMerge(
+              "card"
+            )}
+            >
+              <p className="text-base py-4 flex items-center">
+                &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes. Instantly see the size and impact of each theme.
+              </p>
+              <p className="text-base py-4 flex items-center">
+                &#8226; Each theme comes with an AI-generated summary highlighting key evidence, opportunities, and actionable recommendations.
+              </p>
+              <p className="text-base py-4 flex items-center">
+                &#8226; Explore the evidence behind each theme with ease. Access original feedback and customer quotes instantly by a direct link.
+              </p>
+            </div>
+          </div>
+          <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-7/12" />
         </div>
 
         <div id="Features" className="section-heading pt-24">
@@ -119,7 +139,7 @@ export const ProductShowcase = () => {
           </p> */}
         </div>
         <div className="md:flex items-center pt-8">
-          <Image src={sourcesImage} alt="Product Image" className="flex md:items-start md:justify-start md:size-5/12"/>
+          <Image src={sourcesImage} alt="Product Image" className="flex md:items-start md:justify-start md:size-5/12" />
 
           <div className="flex flex-col gap-6 items-center ml-24 md:items-start md:justify-start md:w-[548px]">
             {pricingTiers.map(
@@ -150,7 +170,7 @@ export const ProductShowcase = () => {
                   <ul className="flex flex-col lg:w-200">
                     {features.map((feature, index) => (
                       <li key={index} className="text-base flex items-center">
-                        <CheckIcon className="h-4 w-4 inline-flex justify-center items-center mr-3"/>
+                        <CheckIcon className="h-4 w-4 inline-flex justify-center items-center mr-3" />
                         <p className="flex items-center">{feature}</p>
                       </li>
                     ))}
