@@ -20,10 +20,10 @@
     }
 
     .section-title {
-        @apply text-5xl text-center md:text-7xl font-bold tracking-tighter py-1 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text
+        @apply text-5xl text-center md:text-5xl font-bold tracking-tighter py-1 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text
     }
 
     .section-description {
-        @apply text-xl text-[#010D3E] text-center tracking-tight
+        @apply text-lg text-[#010D3E] text-center tracking-tight
     }
 }

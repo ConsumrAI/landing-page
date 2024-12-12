@@ -89,11 +89,11 @@ export const ProductShowcase = () => {
           
         </div>
 
-        <div className='md:flex items-center pt-0 pb-24'>
-          <div className='md:w-[575px]'>
-            {/* <p className="text-xl text-[#010D3E] tracking-tight mt-6"> */}
+        <div className='md:flex items-center pt-14 pb-24'>
+          <div className='md:w-[448px]'>
+            {/* <p className="text-lg text-[#010D3E] tracking-tight mt-6"> */}
 
-            <ul className="text-xl text-[#010D3E] tracking-tight mt-6">
+            <ul className="text-lg text-[#010D3E] tracking-tight mt-6">
               <li className="py-8 flex gap-4 items-center">
                 &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes. Instantly see the size and impact of each theme.
               </li>
@@ -107,7 +107,7 @@ export const ProductShowcase = () => {
             {/* </p> */}
           </div>
           <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-            <Image src={insightsImage} alt='Cog image' className='md:absolute top-24 md:h-auto md:size-[120%] md:max-w-none' />
+            <Image src={insightsImage} alt='Cog image' className='md:absolute md:h-full md:w-auto md:max-w-none' />
           </div>
         </div>
 
@@ -146,10 +146,10 @@ export const ProductShowcase = () => {
                       {title}
                     </h3>
                   </div>
-                  <p className="text-xl pt-4 flex items-center">{desc}</p>
+                  <p className="text-lg pt-4 flex items-center">{desc}</p>
                   <ul className="flex flex-col lg:w-200">
                     {features.map((feature, index) => (
-                      <li key={index} className="text-xl py-1 flex items-center">
+                      <li key={index} className="text-lg py-1 flex items-center">
                         <CheckIcon className="h-6 w-6 inline-flex justify-center items-center mr-3"/>
                         <p className="flex items-center">{feature}</p>
                       </li>
