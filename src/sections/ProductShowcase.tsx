@@ -73,7 +73,7 @@ export const ProductShowcase = () => {
     >
       <div className="container">
         <div className="w-full items-center justify-center flex">
-          <Image src={productImage} alt="Product Image" className="size-6/12" />
+          <Image src={productImage} alt="Product Image" className="size-9/12" />
         </div>
 
         <div className="section-heading pt-5">
