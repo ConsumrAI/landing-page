@@ -73,7 +73,7 @@ export const ProductShowcase = () => {
     >
       <div className="container">
         <div className="w-full items-center justify-center flex">
-          <Image src={productImage} alt="Product Image" className="size-8/12" />
+          <Image src={productImage} alt="Product Image" className="size-6/12" />
         </div>
 
         <div className="section-heading pt-5">
@@ -90,7 +90,7 @@ export const ProductShowcase = () => {
         </div>
 
         <div className='md:flex items-center pt-14 pb-24'>
-          <div className='md:w-[448px]'>
+          <div className='md:w-[348px]'>
             {/* <p className="text-lg text-[#010D3E] tracking-tight mt-6"> */}
 
             <ul className="text-lg text-[#010D3E] tracking-tight mt-6">
@@ -118,8 +118,8 @@ export const ProductShowcase = () => {
             exclusive features.
           </p> */}
         </div>
-        <div className="md:flex items-center py-24">
-          <Image src={sourcesImage} alt="Product Image" className="flex md:items-start md:justify-start md:size-6/12"/>
+        <div className="md:flex items-center pt-8">
+          <Image src={sourcesImage} alt="Product Image" className="flex md:items-start md:justify-start md:size-5/12"/>
 
           <div className="flex flex-col gap-6 items-center ml-24 md:items-start md:justify-start md:w-[548px]">
             {pricingTiers.map(
@@ -141,16 +141,16 @@ export const ProductShowcase = () => {
                 >
                   <div key={index} className="flex justify-between">
                     <h3
-                      className="text-3xl font-bold text-purple-700"
+                      className="text-2xl font-bold text-purple-700"
                     >
                       {title}
                     </h3>
                   </div>
-                  <p className="text-lg pt-4 flex items-center">{desc}</p>
+                  <p className="text-base flex items-center">{desc}</p>
                   <ul className="flex flex-col lg:w-200">
                     {features.map((feature, index) => (
-                      <li key={index} className="text-lg py-1 flex items-center">
-                        <CheckIcon className="h-6 w-6 inline-flex justify-center items-center mr-3"/>
+                      <li key={index} className="text-base flex items-center">
+                        <CheckIcon className="h-4 w-4 inline-flex justify-center items-center mr-3"/>
                         <p className="flex items-center">{feature}</p>
                       </li>
                     ))}

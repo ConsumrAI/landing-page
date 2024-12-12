@@ -39,7 +39,7 @@ export const Hero = () => {
             </strong>
           </div>
           </div>
-          <h1 className="text-7xl md:text-7xl text-center font-bold tracking-tighter py-2 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Track, Analyze, and Optimize Your Brand Reputation.</h1>
+          <h1 className="text-5xl md:text-5xl text-center font-bold tracking-tighter py-2 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Track, Analyze, and Optimize Your Brand Reputation</h1>
           {/* Smarter decisions powered by AI */}
           <p className="text-lg text-[#010D3E] tracking-tight text-center mt-6">Our advanced social listening and AI-powered review monitoring tool captures customer feedback, analyzes brand mentions, and delivers actionable insights from social media and online conversations.</p>
           <div className="flex gap-1 items-center justify-center mt-[30px]">
