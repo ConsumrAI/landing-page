@@ -89,16 +89,16 @@ export const ProductShowcase = () => {
           
         </div>
 
-        <div className='md:flex items-center py-24'>
+        <div className='md:flex items-center pt-0 pb-24'>
           <div className='md:w-[575px]'>
             {/* <p className="text-xl text-[#010D3E] tracking-tight mt-6"> */}
 
             <ul className="text-xl text-[#010D3E] tracking-tight mt-6">
               <li className="py-8 flex gap-4 items-center">
-                &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes.
+                &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes. Instantly see the size and impact of each theme.
               </li>
               <li className="py-8 flex gap-4 items-center">
-                &#8226; Instantly see the size and impact of each theme. Each theme comes with an AI-generated summary highlighting key evidence, opportunities, and actionable recommendations.
+                &#8226; Each theme comes with an AI-generated summary highlighting key evidence, opportunities, and actionable recommendations.
               </li>
               <li className="py-8 flex gap-4 items-center">
                 &#8226; Explore the evidence behind each theme with ease. Access original feedback and customer quotes instantly by a direct link.
@@ -107,7 +107,7 @@ export const ProductShowcase = () => {
             {/* </p> */}
           </div>
           <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-            <Image src={insightsImage} alt='Cog image' className='md:absolute md:h-full md:w-auto md:max-w-none' />
+            <Image src={insightsImage} alt='Cog image' className='md:absolute top-24 md:h-auto md:size-[120%] md:max-w-none' />
           </div>
         </div>
 
