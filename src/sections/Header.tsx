@@ -39,13 +39,13 @@ export const Header = () => {
               <MenuIcon className="h-5 w-5" />
             </button>
             <nav className="hidden md:flex gap-6 text-black items-center">
-              {['About', 'Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
+              {['Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
                 <div className="relative group" key={link}>
-                  <a href="#" className="relative z-10">{link}</a>
+                  <a href={'#'+link} className="relative z-10">{link}</a>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block">
-                    <div className="bg-black text-white text-xs rounded py-1 px-2">
+                    {link!='Features' && <div className="bg-black text-white text-xs rounded py-1 px-2">
                       Coming soon!
-                    </div>
+                    </div>}
                     {/* <div className="w-3 h-3 bg-black absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div> */}
                   </div>
                 </div>

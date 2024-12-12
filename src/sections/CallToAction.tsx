@@ -13,11 +13,11 @@ export const CallToAction = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  
+
   const handleJoinWaitlistClick = () => {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSeYGyRhyOUBlay63K-shFmf7hM9tZSiRzm-9FrJlBA1V_y-Qg/viewform?usp=dialog", "_blank");
   };
-  
+
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
     <section
@@ -29,6 +29,9 @@ export const CallToAction = () => {
           <h2 className="section-title py-2">Ready to turn insights into growth?</h2>
           <p className="section-description mt-5">
             Unlock the power of customer insights with our AI-driven platform. Get actionable recommendations, monitor reviews, and schedule detailed reports - all in one place.
+          </p>
+          <p className="section-description mt-5">
+            Get insights 3x faster than traditional analysis methods.
           </p>
           <motion.img
             src={starImage.src}
@@ -50,7 +53,7 @@ export const CallToAction = () => {
           />
         </div>
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary" onClick={handleJoinWaitlistClick}>Join waitlist</button>
+          <button className="btn btn-primary text-2xl px-5" onClick={handleJoinWaitlistClick}>First 50 waitlist members get 50% lifetime discount!</button>
           {/* <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />

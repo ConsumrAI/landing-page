@@ -5,6 +5,9 @@ import instagramLogo from "@/assets/Instagram.png";
 import linkedinLogo from "@/assets/Linkedin.png";
 import redditLogo from "@/assets/Reddit.png";
 import xLogo from "@/assets/X.png";
+import mediumLogo from "@/assets/Medium.png";
+import appleLogo from "@/assets/Apple.png";
+import productHuntLogo from "@/assets/Product Hunt.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -19,7 +22,7 @@ export const LogoTicker = () => {
               translateX: "-50%",
             }}
             transition={{
-              duration: 21,
+              duration: 20,
               repeat: Infinity,
               ease: "linear",
               repeatType: "loop",
@@ -55,6 +58,21 @@ export const LogoTicker = () => {
               alt="l Logo"
               className="logo-ticker-image"
             />
+            <Image
+              src={mediumLogo}
+              alt="m Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={appleLogo}
+              alt="a Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={productHuntLogo}
+              alt="ph Logo"
+              className="logo-ticker-image"
+            />
 
             {/* Second set of logos for animation */}
             <Image
@@ -85,6 +103,21 @@ export const LogoTicker = () => {
             <Image
               src={linkedinLogo}
               alt="l Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={mediumLogo}
+              alt="m Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={appleLogo}
+              alt="a Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={productHuntLogo}
+              alt="ph Logo"
               className="logo-ticker-image"
             />
           </motion.div>

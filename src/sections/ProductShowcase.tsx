@@ -5,32 +5,38 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { twMerge } from "tailwind-merge";
-import painpointsImage from "@/assets/painpoints.png";
+import insightsImage from "@/assets/AI insights.png";
+import sourcesImage from "@/assets/Sources.png";
+import CheckIcon from "@/assets/check.svg";
 
 const pricingTiers = [
   {
-    title: "1. Connect Sources",
+    title: "1. Listen",
     monthlyPrice: 0,
     buttonText: "Get started for free",
     popular: false,
     inverse: false,
+    desc: "Let AI monitor your brand across review sites, social media, and digital channels.",
     features: [
-      "Automatically gather feedback from 25+ sources, including reviews, social media mentions, and customer interactions.",
-      "Get real-time updates with smart filtering to focus on what matters most.",
+      "Universal feedback capture.",
+      "Real-time brand monitoring.",
+      "Smart mention tracking.",
       // "2GB storage",
       // "Integrations",
       // "Basic support",
     ],
   },
   {
-    title: "2. Gain Insights",
+    title: "2. Learn",
     monthlyPrice: 9,
     buttonText: "Sign up now",
     popular: false,
     inverse: false,
+    desc: "Convert customer voices into business intelligence with advanced AI analysis.",
     features: [
-      "Understand your audience with sentiment analysis and keyword tracking.",
-      "Identify trends, uncover pain points, and compare performance over time.",
+      "Sentiment trends.",
+      "Customer satisfaction metrics.",
+      "Predictive analytics."
       // "50GB storage",
       // "Integrations",
       // "Priority support",
@@ -39,14 +45,16 @@ const pricingTiers = [
     ],
   },
   {
-    title: "3. Make Decisions",
+    title: "3. Leverage",
     monthlyPrice: 19,
     buttonText: "Sign up now",
     popular: false,
     inverse: false,
+    desc: "Turn insights into impact with automated recommendations and growth opportunities.", 
     features: [
-      "Receive tailored action plans powered by AI. Address issues, amplify strengthsm, and seize new opportunities.",
-      "Download reports and collaborate with your team to drive results.",
+      "ROI-focused actions.",
+      "Retention strategies.",
+      "Revenue optimization."
     ],
   },
 ];
@@ -61,81 +69,97 @@ export const ProductShowcase = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-24 overflow-x-clip"
+      className="bg-white pb-24 overflow-x-clip"
     >
       <div className="container">
-        <div className="section-heading">
+        <div className="w-full items-center justify-center flex">
+          <Image src={productImage} alt="Product Image" className="size-8/12" />
+        </div>
+
+        <div className="section-heading pt-5">
           {/* <div className="flex justify-center">
             <div className="tag">Boost your productivity</div>
           </div> */}
-          <h2 className="section-title mt-5">
+          <p className="section-description">
+            Every interaction matters - gather intel from social media, customer reviews, and support tickets in one unified view. Keep tabs on competitors and track custom keywords to stay ahead of market trends. Spot viral conversations early with smart hashtag monitoring that keeps you in the loop.
+          </p>
+          <h2 className="section-title pt-52">
             A smarter way to understand your customers
           </h2>
-          <p className="section-description mt-5">
-            Streamline feedback collection, gain insights, and accelerate growth with data-driven recommendations for better decision making.
-          </p>
-        </div>
-        <div className="relative">
-          <Image src={productImage} alt="Product Image" className="mt-10 shadow-2xl shadow-purple-800" />
-          <motion.img
-            src={starImage.src}
-            alt="Pyramid Image"
-            height={262}
-            width={262}
-            className="hidden md:block absolute -right-36 -top-44"
-            style={{
-              translateY,
-            }}
-          />
+          
         </div>
 
-        <div className="section-heading mt-28">
+        <div className='md:flex items-center py-24'>
+          <div className='md:w-[575px]'>
+            {/* <p className="text-xl text-[#010D3E] tracking-tight mt-6"> */}
+
+            <ul className="text-2xl text-[#010D3E] tracking-tight mt-6">
+              <li className="py-8 flex gap-4 items-center">
+                &#8226; Our AI-powered insights platform turns thousands of customer mentions and reviews into clear, structured themes.
+              </li>
+              <li className="py-8 flex gap-4 items-center">
+                &#8226; Instantly see the size and impact of each theme. Each theme comes with an AI-generated summary highlighting key evidence, opportunities, and actionable recommendations.
+              </li>
+              <li className="py-8 flex gap-4 items-center">
+                &#8226; Explore the evidence behind each theme with ease. Access original feedback and customer quotes instantly by a direct link.
+              </li>
+            </ul>
+            {/* </p> */}
+          </div>
+          <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
+            <Image src={insightsImage} alt='Cog image' className='md:absolute md:h-full md:w-auto md:max-w-none' />
+          </div>
+        </div>
+
+        <div id="Features" className="section-heading pt-24">
           <h2 className="section-title">How it works</h2>
           {/* <p className="section-description mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
             exclusive features.
           </p> */}
         </div>
-        <div className="flex flex-col gap-6 items-center mt-10 md:flex-row md:items-start md:justify-center">
-          {pricingTiers.map(
-            ({
-              title,
-              monthlyPrice,
-              buttonText,
-              popular,
-              inverse,
-              features,
-            }, index) => (
-              <div
-                className={twMerge(
-                  "card",
-                  inverse === true && "border-black bg-black text-white"
-                )}
-                key={index}
-              >
-                <div key={index} className="flex justify-between">
-                  <h3
-                    className={twMerge(
-                      "text-lg font-bold text-black/75",
-                      inverse === true && "text-white/60"
-                    )}
-                  >
-                    {title}
-                  </h3>
+        <div className="md:flex items-center py-24">
+          <Image src={sourcesImage} alt="Product Image" className="flex md:items-start md:justify-start md:size-6/12"/>
+
+          <div className="flex flex-col gap-6 items-center ml-24 md:items-start md:justify-start md:w-[548px]">
+            {pricingTiers.map(
+              ({
+                title,
+                monthlyPrice,
+                buttonText,
+                popular,
+                inverse,
+                features,
+                desc
+              }, index) => (
+                <div
+                  className={twMerge(
+                    "card",
+                    inverse === true && "border-black bg-black text-white"
+                  )}
+                  key={index}
+                >
+                  <div key={index} className="flex justify-between">
+                    <h3
+                      className="text-3xl font-bold text-purple-700"
+                    >
+                      {title}
+                    </h3>
+                  </div>
+                  <p className="text-xl pt-4 flex items-center">{desc}</p>
+                  <ul className="flex flex-col lg:w-200">
+                    {features.map((feature, index) => (
+                      <li key={index} className="text-xl py-1 flex items-center">
+                        <CheckIcon className="h-6 w-6 inline-flex justify-center items-center mr-3"/>
+                        <p className="flex items-center">{feature}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="flex flex-col lg:w-64 gap-5 mt-1">
-                  {features.map((feature, index) => (
-                    <li key={index} className="text-sm flex items-center gap-4">
-                      {/* <ArrowRight className="h-6 w-6" /> */}
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          )}
+              )
+            )}
+          </div>
         </div>
-        <Image src={painpointsImage} alt="Product Image" className="mt-20 shadow-2xl shadow-purple-800" />
       </div>
     </section>
   );
