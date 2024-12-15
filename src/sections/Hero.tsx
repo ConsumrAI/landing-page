@@ -23,27 +23,29 @@ export const Hero = () => {
       <div className='md:flex items-center'>
         <div className='md:w-auto'>
           <div className='flex items-center justify-center'>
-          <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
-            <strong className='text-purple-700'>
-              <Typewriter
-                options={{
-                  strings: textOptions,
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 20,
-                  delay: 50,
-                  // @ts-ignore
-                  pauseFor: 750
-                }}
-              />
-            </strong>
-          </div>
+            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
+              <strong className='text-purple-700'>
+                <Typewriter
+                  options={{
+                    strings: textOptions,
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 20,
+                    delay: 50,
+                    // @ts-ignore
+                    pauseFor: 750
+                  }}
+                />
+              </strong>
+            </div>
           </div>
           <h1 className="text-5xl md:text-5xl text-center font-bold tracking-tighter py-2 bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Track, Analyze, and Optimize Your Brand Reputation</h1>
           {/* Smarter decisions powered by AI */}
           <p className="text-lg text-[#010D3E] tracking-tight text-center mt-6">Our advanced social listening and AI-powered review monitoring tool captures customer feedback, analyzes brand mentions, and delivers actionable insights from social media and online conversations.</p>
           <div className="flex gap-1 items-center justify-center mt-[30px]">
-            <button onClick={handleJoinWaitlistClick} className="btn">Join Waitlist</button>
+            <button className="btn">
+              <a href="#waitlist">Join Waitlist</a>
+            </button>
             {/* <button className="btn btn-text gap-1">
               <span>Learn more</span>
               <ArrowIcon className="h-5 w-5" />

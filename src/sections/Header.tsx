@@ -41,16 +41,18 @@ export const Header = () => {
             <nav className="hidden md:flex gap-6 text-black items-center">
               {['Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
                 <div className="relative group" key={link}>
-                  <a href={'#'+link} className="relative z-10">{link}</a>
+                  <a href={'#' + link} className="relative z-10">{link}</a>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block">
-                    {link!='Features' && <div className="bg-black text-white text-xs rounded py-1 px-2">
+                    {link != 'Features' && <div className="bg-black text-white text-xs rounded py-1 px-2">
                       Coming soon!
                     </div>}
                     {/* <div className="w-3 h-3 bg-black absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div> */}
                   </div>
                 </div>
               ))}
-              <button onClick={handleJoinWaitlistClick} className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">Join Waitlist</button>
+              <button className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
+                <a href="#waitlist">Join Waitlist</a>
+              </button>
             </nav>
           </div>
 
@@ -58,12 +60,14 @@ export const Header = () => {
             (
               <div className="flex items-center justify-center">
                 <nav className="md:hidden gap-6 mt-6 text-black text-center">
-                  {['About', 'Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
+                  {['Features', 'Pricing', 'Contact', 'Blog'].map((link) => (
                     <div className="relative group py-2" key={link}>
-                      <a href="#" className="relative z-10">{link}</a>
+                      <a href={"#" + link} className="relative z-10">{link}</a>
                     </div>
                   ))}
-                  <button onClick={handleJoinWaitlistClick} className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight mt-6">Join Waitlist</button>
+                  <button className="bg-[#490f74] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight mt-6">
+                    <a href="#waitlist">Join Waitlist</a>
+                  </button>
                 </nav>
               </div>
             )}

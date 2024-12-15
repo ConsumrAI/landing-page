@@ -128,7 +128,7 @@ export const ProductShowcase = () => {
               </p>
             </div>
           </div>
-          <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-7/12" />
+          <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-9/12" />
         </div>
 
         <div id="Features" className="section-heading pt-48">
