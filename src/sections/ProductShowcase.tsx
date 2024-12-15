@@ -112,7 +112,7 @@ export const ProductShowcase = () => {
           </h2>
         </div>
         <div className="md:flex items-center pt-8">
-          <div className="flex flex-col gap-6 items-center mr-24 md:items-end md:justify-end md:w-[548px]">
+          <div className="flex flex-col gap-6 items-center md:items-end md:justify-end md:w-[548px]">
             <div className={twMerge(
               "card"
             )}
@@ -128,7 +128,7 @@ export const ProductShowcase = () => {
               </p>
             </div>
           </div>
-          <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-9/12" />
+          <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-8/12" />
         </div>
 
         <div id="Features" className="section-heading pt-48">
