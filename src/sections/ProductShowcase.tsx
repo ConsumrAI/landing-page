@@ -131,7 +131,7 @@ export const ProductShowcase = () => {
           <Image src={insightsImage} alt="Insights" className="flex md:items-start md:justify-start md:size-7/12" />
         </div>
 
-        <div id="Features" className="section-heading pt-24">
+        <div id="Features" className="section-heading pt-48">
           <h2 className="section-title">How it works</h2>
           {/* <p className="section-description mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
